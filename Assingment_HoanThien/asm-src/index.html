@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Assingemnt</title>
+</head>
+<body>
+    <div class="container">
+        <header><img src="Image/bg2.png" alt=""></header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="gioiThieu.html" >Giới Thiệu</a></li>
+                <li><a href="tranghoatdong.html">Tin hoạt động</a></li>
+                <li><a href="trangthongbao.html">Thông báo</a></li>
+                <li><a href="lienHe.html">Liên hệ</a></li>
+            </ul>        
+        </nav>
+              <section>
+                <div class="slideshow-container">
+                  <div class="mySlides fade">             
+                    <img src="Image/sildeanh1.jpg" style="width:100%">          
+                  </div>    
+                  <div class="mySlides fade">            
+                    <img src="Image/sildeanh2.jpg" style="width:100%">     
+                  </div>    
+                  <div class="mySlides fade">      
+                    <img src="Image/slideanh3.jpg" style="width:100%">     
+                  </div>
+                  <div class="mySlides fade">       
+                      <img src="Image/slideanh4.jpg" style="width:100%">                        
+                    </div>            
+                  </div>  
+                  <script>
+                      let slideIndex = 0;
+                      showSlides();
+                    
+                      function showSlides() {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("dot");
+                        for (i = 0; i < slides.length; i++) {
+                          slides[i].style.display = "none";  
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) {slideIndex = 1}    
+                        for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";  
+                        dots[slideIndex-1].className += " active";
+                        setTimeout(showSlides, 2000); // Change image every 2 seconds
+                      }
+                  </script>
+                  
+              <div class="contents">
+                  <div class="productsSlide">
+                    <div class="product_slide_item">
+                      <img src="Image/slideitem1.jpg" alt="" srcset="">      
+                      <div class="textItem">
+                        <h3>Trường THPT thành phố Cao Bằng thực hiện tốt mô hình Tổ tự quản “Cổng trường an toàn giao thông”</h3>
+                        <p>Để tạo nên nét đẹp văn hoá trường học, nâng cao ý thức, trách nhiệm của học sinh trong việc tham gia giao thông, đảm bảo sức khỏe cho học sinh trong học tập, tháng 10 năm 2021, trường THPT thành phố Cao Bằng đã phối hợp với Phòng Cảnh sát giao thông Công an tỉnh Cao Bằng xây dựng mô hình điểm Tổ tự quản “Cổng trường an toàn giao thông” tại trường THPT thành phố Cao Bằng.</p>
+                      </div>                       
+                    </div>
+                    <div class="product_slide_item">
+                      <img src="Image/sildeitem2.jpg" alt="" srcset="">
+                      <div class="textItem">
+                        <h3>LỄ KHAI MẠC TUẦN LỄ HƯỞNG ỨNG HỌC TẬP SUỐT ĐỜI NĂM 2024</h3>
+                        <p>Thực hiện kế hoạch số 102/KH-SGDĐT ngày 22 tháng 9 năm 2024 của sở GD&ĐT Cao Bằng về việc tổ chức Lễ Khai mạc Tuần lễ hưởng ứng học tập suốt đời năm 2024, trường THPT thành phố Cao Bằng vinh dự được Sở Giáo dục và Đào tạo lựa chọn là nơi tổ chức Lễ Khai mạc (cấp tỉnh) diễn ra vào ngày 01/10/2024.</p>
+                      </div>  
+                    </div>
+                    <div class="product_slide_item">
+                      <img src="Image/slideitem3.png" alt="" srcset="">
+                      <div class="textItem">
+                        <h3>CHI ĐOÀN 11A1 TỔ CHỨC THÀNH CÔNG ĐẠI HỘI MẪU NHIỆM KỲ 2024 – 2025</h3>
+                        <p>Ngày 19/9/2024, Thực hiện theo kế hoạch của Ban Chấp Hành Đoàn trường về việc tổ chức Đại hội Chi đoàn nhiệm kỳ 2024 - 2025. Chi đoàn 11A1 đã tổ chức thành công Đại hội Chi đoàn mẫu nhiệm kỳ 2024 - 2025.</p>
+                      </div>  
+                      
+                    </div>
+                    
+                    <script>
+                    let slideItem = 1;
+                      showSlides(slideItem);
+                      
+                      function plusSlides(n) {
+                        showSlides(slideItem += n);
+                      }               
+                      function showSlides(n) {
+                        let i;
+                        let slide = document.getElementsByClassName("product_slide_item");
+                        if (n > slide.length) {slideItem = 1}    
+                        if (n < 1) {slideItem = slide.length}
+                        for (i = 0; i < slide.length; i++) {
+                          slide[i].style.display = "none";  
+                        }
+                        slide[slideItem-1].style.display = "";  
+                      }</script>
+                      <div style="text-align: end; width: 100%;"><span class="dotItem"></span><span class="dotItem"></span><span class="dotItem"></span></div>
+                  </div>
+                  <div class="content2">
+                    <div class="register-form">
+                      <h2>Đăng ký thành viên</h2>
+                      <form>  
+                        <div class="nv-info">Để đăng ký thành viên, bạn cần khai báo tất cả các ô trống dưới đây</div>            
+                        <input type="text" id="username" name="username" placeholder="Họ và tên đệm" required>
+                        <input type="text" id="username" name="username" placeholder="Tên" required>
+                        <input type="text" id="username" name="username" placeholder="Tên đăng nhập" required>
+                    
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+                        <input type="password" id="password" name="password" placeholder="Nhập lại mật khẩu" required>
+                        
+                    
+                        <button type="submit">Đăng ký</button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="productsSlideBottom">
+                      <div class="slideItemBottom">
+                        <a href="contentItem1 copy 4.html"><img src="Image/slideitem5.jpg" alt="" srcset=""></a>
+                        <p>Công đoàn ngành giáo dục và đào tạo tổ chức hội nghị <br> tổng kết công tác công đoàn năm học 2021 - 2022</p>
+                      </div>
+                      <div class="slideItemBottom">
+                        <a href="contentItem1 copy 3.html"><img src="Image/slideitem4.jpg" alt="" srcset=""></a>
+                        <p>117 cán bộ, giáo viên là trưởng điểm, phó trưởng điểm,<br> thư ký của 21 điểm thi toàn tỉnh.</p>
+                      </div>
+                      <div class="slideItemBottom">
+                        <a href="contentItem1 copy.html"><img src="Image/cti2.3.jpeg" alt="" srcset=""></a>
+                        <p>Thực hiện kế hoạch số 102/KH-SGDĐT ngày 22 tháng 9 năm 2024 của sở GD&ĐT Cao Bằng về việc tổ chức Lễ Khai mạc Tuần lễ hưởng ứng học tập suốt đời năm 2024</p>
+                      </div>
+                  </div>
+              </div>
+              </section>
+            <footer>
+                  <div class="mainFooter">
+                    <img src="Image/logo-truong.png" alt="" srcset="">
+                  <p>
+                    ©  TRANG THÔNG TIN ĐIỆN TỬ TRƯỜNG THPT THÀNH PHỐ CAO BẰNG <br><br>
+                    Địa chỉ: Nà Cạn, Phường Sông Bằng, Thành phố Cao Bằng, tỉnh Cao Bằng <br>
+                    Điện thoại: 02063 852 501  -  Email: c3thixa.caobang@moet.edu.vn <br>
+                    Chịu trách nhiệm nội dung: Đinh Trọng Dũng - Hiệu trưởng nhà trường <br>
+                    Ghi rõ nguồn http://thptthanhphocaobang.edu.vn khi phát hành lại thông tin từ địa chỉ này.
+                    </p>
+                  </div>
+            </footer>
+          
+    </div>
+</body>
+</html>
